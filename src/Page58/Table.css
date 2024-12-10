@@ -1,0 +1,46 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.cell, .input-cell {
+  width: auto;
+  height: 80px; /* 고정된 높이 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #626262; /* 칸 구분 */
+  border-collapse: collapse; /* 테두리 겹침 제거 */
+  box-sizing: border-box; /* 패딩 및 테두리 포함 */
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+
+.column-1 {
+  width: 80px;
+}
+
+.column-2 {
+  width: 100px;
+}
+
+.column-3 {
+  width: 350px;
+}
+
+.column-4 {
+  width: 100px;
+}
+
+.row:first-child {
+  background-color: #f7ffe9;
+  font-weight: bold;
+}
