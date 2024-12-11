@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import "./Table.css";
 
+const floorInfo = [
+  ["층", "시설", "설명", "프로그램명"],
+  ["5층", "음악실", "악기연주, 노래 교실, 공연 관람 등 노후의 건전한 여가 문화를 위한 _____ 프로그램이 진행됩니다.", ""],
+  ["4층", "미술실", "그림 그리기, 서예, 공예 등 노후의 건전한 여가 문화를 위한 _____프로그램이 진행됩니다.", ""],
+  ["3층", "체육실", "탁구, 요가, 게이트볼, 스포츠댄스 등 노후의 건강한 신체유지를 위한 _____프로그램이 진행됩니다.", ""],
+  ["2층", "요리실", "요리, 제과제빵, 바리스타(커피제조) 등 일상생활 참여 증진을 위한 _____프로그램이 진행됩니다.", ""],
+  ["1층", "진료실과 물리치료실", "건강상담, 응급처치, 물리치료 처방 등 의사의 _____를 받을 수 있습니다. 또한 운동치료, 전기 자극 치료 등 ________ 서비스를 이용할 수 있습니다.", ""],
+];
+
 const Cell = ({ content, columnIndex, isCorrect }) => {
   const columnClass = `column-${columnIndex + 1}`;
-  const correctClass = isCorrect === true ? "correct" : isCorrect === false ? "incorrect" : "";
+  const correctClass = (isCorrect === true ? "correct" : (isCorrect === false ? "incorrect" : ""));
   return (
     <div className={`cell ${columnClass} ${correctClass}`}>{content}</div>
   );
@@ -18,8 +27,6 @@ const Row = ({ rowData, isInputRow, onInputChange, inputValues, answers }) => {
           return (
             <input
               key={index}
-              type="text"
-              maxLength="10"
               className={`input-cell column-${index + 1} ${isCorrect === true ? "correct" : isCorrect === false ? "incorrect" : ""}`}
               value={inputValues[rowData[0]]?.[index] || ""}
               onChange={(e) => onInputChange(rowData[0], index, e.target.value)}
@@ -39,7 +46,7 @@ const Row = ({ rowData, isInputRow, onInputChange, inputValues, answers }) => {
   );
 };
 
-// Grid 컴포넌트
+
 const Table = () => {
   const correctAnswers = {
     "5층": ["음악실", "음악"],
@@ -120,22 +127,14 @@ const Table = () => {
     );
   };
 
-  const gridData = [
-    ["층", "시설", "설명", "프로그램명"],
-    ["5층", "음악실", "악기연주, 노래 교실, 공연 관람 등 노후의 건전한 여가 문화를 위한 _____ 프로그램이 진행됩니다.", ""],
-    ["4층", "미술실", "그림 그리기, 서예, 공예 등 노후의 건전한 여가 문화를 위한 _____프로그램이 진행됩니다.", ""],
-    ["3층", "체육실", "탁구, 요가, 게이트볼, 스포츠댄스 등 노후의 건강한 신체유지를 위한 _____프로그램이 진행됩니다.", ""],
-    ["2층", "요리실", "요리, 제과제빵, 바리스타(커피제조) 등 일상생활 참여 증진을 위한 _____프로그램이 진행됩니다.", ""],
-    ["1층", "진료실과 물리치료실", "건강상담, 응급처치, 물리치료 처방 등 의사의 _____를 받을 수 있습니다. 또한 운동치료, 전기 자극 치료 등 ________ 서비스를 이용할 수 있습니다.", ""],
-  ];
 
   return (
     <div className="grid">
-      {gridData.map((rowData) => (
+      {floorInfo.map((rowData) => (
         <Row
           key={rowData[0]}
           rowData={rowData}
-          isInputRow={gridData.indexOf(rowData) > 0}
+          isInputRow={floorInfo.indexOf(rowData) > 0}
           onInputChange={handleInputChange}
           inputValues={inputValues}
           answers={results}

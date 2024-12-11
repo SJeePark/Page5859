@@ -1,7 +1,6 @@
 import React from "react";
 import Question from "../Component/Question";
 import LottoNum from "./LottoNum";
-import LottoQuestion from "./LottoQuestion";
 import LottoTable from "./LottoTable";
 
 const page = {
@@ -31,7 +30,6 @@ const Page59 = () => {
         />
         <LottoTable/>
         <LottoNum/>
-        <LottoQuestion/>
       </div>
     </div>
   ); 
