@@ -1,6 +1,6 @@
 import './App.css';
-import Page58 from './Page/Page58';
-import Page59 from './Page/Page59';
+import Page58 from './sangjee/Page58/Page58';
+import Page59 from './sangjee/Page59/Page59';
 
 
 function App() {

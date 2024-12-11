@@ -1,6 +1,6 @@
 import React from 'react';
-import flowerpot from '../img/flowerpot.png'; // 이미지 파일 import
-import './Question.css'; // CSS 파일 import
+import flowerpot from '../img/flowerpot.png';
+import './Question.css';
 
 const Question = ({ induce, explanation }) => {
   return (

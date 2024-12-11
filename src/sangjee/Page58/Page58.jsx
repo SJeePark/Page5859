@@ -1,12 +1,25 @@
 import React from 'react';
 import Question from '../Component/Question';
-import '../Page/Page5859.css';
-import Table from '../Page58/Table';
+import Table from './Table';
+
+
+const page = {
+  display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "100vh",
+}
+
+const content = {
+  display: "flex",
+  flexDirection: "column",
+}
+
 
 const Page58 = () => {
   return (
-    <div className='page'>
-      <div className="content">
+    <div className='page' style={page}>
+      <div className="content" style={content}>
         <Question 
           induce={'층별 시설 기억해두기'}
           explanation={

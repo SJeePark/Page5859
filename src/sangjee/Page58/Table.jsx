@@ -64,6 +64,7 @@ const Table = () => {
     setInputValues(updatedValues);
   };
 
+
   const checkAnswers = () => {
     const updatedResults = {};
     let allCorrect = true;
@@ -93,7 +94,7 @@ const Table = () => {
     setResults(updatedResults);
 
     if (allCorrect) {
-      setErrorMessage("정답입니다! 🎉");
+      setErrorMessage("정답입니다!");
     } else {
       const facilityMessage = incorrectFacilities.length
         ? `시설: ${incorrectFacilities.join(", ")}`

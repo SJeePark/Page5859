@@ -1,13 +1,25 @@
 import React from "react";
 import Question from "../Component/Question";
-import LottoNum from "../Page59/LottoNum";
-import LottoQuestion from "../Page59/LottoQuestion";
-import LottoTable from '../Page59/LottoTable';
+import LottoNum from "./LottoNum";
+import LottoQuestion from "./LottoQuestion";
+import LottoTable from "./LottoTable";
+
+const page = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: "80vh",
+}
+
+const content = {
+  display: "flex",
+  flexDirection: "column",
+}
 
 const Page59 = () => {
   return (
-    <div className='page'>
-      <div className="content">
+    <div className='page' style={page}>
+      <div className="content" style={content}>
         <Question 
           induce={'복권 번호 당첨'}
           explanation={
