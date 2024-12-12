@@ -1,22 +1,22 @@
 .grid {
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 
 .row {
   display: flex;
   flex-direction: row;
-
 }
 
-.cell, .input-cell {
+.cell {
   width: auto;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #626262; 
-  border-collapse: collapse; 
+  border: 1px solid #626262;
+  border-collapse: collapse;
   text-align: center;
   padding: 0;
 }
@@ -26,17 +26,16 @@
   width: 80px;
 }
 
+
 .column-2 {
-  width: 100px;
-}
-
-.column-3 {
-  width: 350px;
-}
-
-.column-4 {
   width: 120px;
 }
+
+
+.column-3 {
+  width: 450px;
+}
+
 
 .row:first-child {
   background-color: #f7ffe9;
@@ -46,4 +45,4 @@
 button{
   margin-top: 10px;
   margin-right: 10px;
-}
+} 

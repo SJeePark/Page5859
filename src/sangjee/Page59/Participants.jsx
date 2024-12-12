@@ -64,7 +64,6 @@ const Participants = ({ winningNumbers }) => {
     const participantsData = generateParticipantNumbers(winningNumbers);
     setParticipants(participantsData);
 
-    // 서준의 번호와 당첨 번호의 교집합 계산
     const seojun = participantsData.find((participant) => participant.name === "서준");
     if (seojun) {
       const matchingNumbers = seojun.numbers.filter((num) => winningNumbers.includes(num));

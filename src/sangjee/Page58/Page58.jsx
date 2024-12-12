@@ -1,5 +1,6 @@
 import React from 'react';
 import Question from '../Component/Question';
+import InputSection from './InputSection';
 import Table from './Table';
 
 
@@ -15,7 +16,6 @@ const content = {
   flexDirection: "column",
 }
 
-
 const Page58 = () => {
   return (
     <div className='page' style={page}>
@@ -30,6 +30,14 @@ const Page58 = () => {
           }
         />
         <Table />
+        <InputSection/>
+        
+        <div className='container'
+        style={{display: "flex", flexDirection: "row", textDecoration: "underline", textDecorationThickness:"1px" }}>
+          <p>☑</p>
+          <p style={{color:"red"}}>복지관의 층별 시설</p>
+          <p>을 기억해주세요</p>
+        </div>
       </div>
     </div>
   );

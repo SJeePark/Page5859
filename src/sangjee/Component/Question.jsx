@@ -6,10 +6,8 @@ const Question = ({ induce, explanation }) => {
   return (
     <div>
     <div className="question-container">
-      <div className="description">
-        <img src={flowerpot} alt="flowerpot" className="image" />
+        <img src={flowerpot} className="image" />
         <div className="induce">{induce}</div>
-      </div>
     </div>
     <div className='explanation'>
     {explanation}

@@ -54,7 +54,6 @@ const LottoNum = () => {
         </tbody>
       </table>
 
-      {/* 당첨 번호가 준비된 상태에서만 참가자 테이블 렌더링 */}
       {winningNumbers.length > 0 && <Participants winningNumbers={winningNumbers} />}
     </div>
   );
