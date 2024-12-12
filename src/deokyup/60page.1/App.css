@@ -1,0 +1,73 @@
+
+.page {
+ 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+ 
+}
+
+
+
+.header-icon {
+  width: 150px;
+  margin-right: 400px;
+}
+
+
+
+.instructions {
+  font-size: 15px;
+  line-height: 0.5;
+  max-width: 400px;
+  color:#333
+}
+
+.comic-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.comic-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.content {
+  max-width: 500px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.example {
+  font-size:15px;
+  color: #555;
+  
+}
+
+.example-label {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.answers {
+  margin-top: 10px;
+}
+
+
+
+.page-number {
+  font-size: 12px;
+  color: #333;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}

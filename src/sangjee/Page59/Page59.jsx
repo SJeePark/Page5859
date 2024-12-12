@@ -20,7 +20,7 @@ const Page59 = () => {
     <div className='page' style={page}>
       <div className="content" style={content}>
         <Question 
-          induce={'복권 번호 당첨'}
+          induce={'복권 등수 확인하기'}
           explanation={
             <>
               기쁨마을에서 5명의 복권 당첨자가 나왔습니다.당첨번호와 순위,<br/>
